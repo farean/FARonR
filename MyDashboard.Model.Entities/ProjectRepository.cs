@@ -17,10 +17,10 @@ namespace MyDashboard.Model.Entities
             Project project = new Project();
             return project;
         }
-        public static IEnumerable<Project> GetProjectsbyAdministrator()
+        public static IList<IProject> GetProjectsbyAdministrator()
         {
-            List<Project> projects = new List<Project>();
-            return projects;
+            var projects = new List<Project>();
+            return (IList<IProject>)projects;
         }
     }
 }

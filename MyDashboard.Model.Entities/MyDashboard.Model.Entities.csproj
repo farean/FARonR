@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IProject.cs" />
+    <Compile Include="Interfaces\IOwner.cs" />
+    <Compile Include="Owner.cs" />
     <Compile Include="Project.cs" />
     <Compile Include="ProjectRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

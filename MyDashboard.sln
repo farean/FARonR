@@ -5,6 +5,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MyDashboard.Model", "MyDash
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDashboard.Model.Entities", "MyDashboard.Model.Entities\MyDashboard.Model.Entities.csproj", "{481AAB57-7FBC-48B4-BB6A-734B3C54FF4A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDashboard.Model.Repositories", "MyDashboard.Model.Repositories\MyDashboard.Model.Repositories.csproj", "{5B8DC9FD-6CD1-49BF-B928-DE74040D4D37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDashboard.Model.Interfaces", "MyDashboard.Model.Interfaces\MyDashboard.Model.Interfaces.csproj", "{AAE77D3C-21EC-4204-9355-53650C014BDE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,11 +19,21 @@ Global
 		{481AAB57-7FBC-48B4-BB6A-734B3C54FF4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{481AAB57-7FBC-48B4-BB6A-734B3C54FF4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{481AAB57-7FBC-48B4-BB6A-734B3C54FF4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B8DC9FD-6CD1-49BF-B928-DE74040D4D37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B8DC9FD-6CD1-49BF-B928-DE74040D4D37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B8DC9FD-6CD1-49BF-B928-DE74040D4D37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B8DC9FD-6CD1-49BF-B928-DE74040D4D37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAE77D3C-21EC-4204-9355-53650C014BDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAE77D3C-21EC-4204-9355-53650C014BDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAE77D3C-21EC-4204-9355-53650C014BDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAE77D3C-21EC-4204-9355-53650C014BDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{481AAB57-7FBC-48B4-BB6A-734B3C54FF4A} = {2605C724-A9F5-4C02-82B0-67C546221B2E}
+		{5B8DC9FD-6CD1-49BF-B928-DE74040D4D37} = {2605C724-A9F5-4C02-82B0-67C546221B2E}
+		{AAE77D3C-21EC-4204-9355-53650C014BDE} = {2605C724-A9F5-4C02-82B0-67C546221B2E}
 	EndGlobalSection
 EndGlobal

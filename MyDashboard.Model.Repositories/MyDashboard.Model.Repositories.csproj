@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{481AAB57-7FBC-48B4-BB6A-734B3C54FF4A}</ProjectGuid>
+    <ProjectGuid>{5B8DC9FD-6CD1-49BF-B928-DE74040D4D37}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MyDashboard.Model.Entities</RootNamespace>
-    <AssemblyName>MyDashboard.Model.Entities</AssemblyName>
+    <RootNamespace>MyDashboard.Model.Repositories</RootNamespace>
+    <AssemblyName>MyDashboard.Model.Repositories</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -21,7 +21,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -31,9 +30,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -45,11 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Owner.cs" />
-    <Compile Include="Project.cs" />
+    <Compile Include="ProjectRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MyDashboard.Model.Entities\MyDashboard.Model.Entities.csproj">
+      <Project>{481AAB57-7FBC-48B4-BB6A-734B3C54FF4A}</Project>
+      <Name>MyDashboard.Model.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyDashboard.Model.Interfaces\MyDashboard.Model.Interfaces.csproj">
       <Project>{AAE77D3C-21EC-4204-9355-53650C014BDE}</Project>
       <Name>MyDashboard.Model.Interfaces</Name>

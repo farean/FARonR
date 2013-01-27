@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using MyDashboard.Model.Entities.Interfaces;
+using MyDashboard.Model.Interfaces.Entities;
 
 namespace MyDashboard.Model.Entities
 {

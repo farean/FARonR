@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using MyDashboard.Model.Entities.Interfaces;
+using MyDashboard.Model.Interfaces.Entities;
+using MyDashboard.Model.Entities;
 [assembly: CLSCompliant(true)]
-namespace MyDashboard.Model.Entities
+namespace MyDashboard.Model.Repositories
 {
     public class ProjectRepository
     {

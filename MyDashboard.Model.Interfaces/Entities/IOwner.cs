@@ -1,7 +1,7 @@
 ﻿using System;
-namespace MyDashboard.Model.Entities.Interfaces
+namespace MyDashboard.Model.Interfaces.Entities
 {
-    public interface IProject
+    public interface IOwner
     {
         int ID { get; set; }
         string Name { get; set; }

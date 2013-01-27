@@ -10,5 +10,6 @@ namespace MyDashboard.Model.Entities
     {
         public int ID { get; set; }
         public string Name { get; set; }
+        public IList<IOwner> Owners { get; set; }
     }
 }

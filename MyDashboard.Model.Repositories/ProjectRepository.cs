@@ -5,13 +5,16 @@ using System.Text;
 using MyDashboard.Model.Entities;
 using MyDashboard.Model.Interfaces.Entities;
 using MyDashboard.Model.Interfaces.Repositories;
-[assembly: CLSCompliant(true)]
+
 namespace MyDashboard.Model.Repositories
 {
     public class ProjectRepository : IProjectRepository
     {
         public IProject GetProjectbyID(int ID)
         {
+            if (ID <= 0)
+                return null;
+
             Project project = new Project();
             return (IProject)project;
         }

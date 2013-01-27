@@ -76,11 +76,9 @@ namespace MyDashboard.Model.Tests
             Assert.Inconclusive("TODO: Implement code to verify target");
         }
 
-        /// <summary>
-        ///A test for GetProjectbyID
-        ///</summary>
+
         [TestMethod()]
-        public void GetProjectbyIDTest()
+        public void GetProjectbyIDTest_WhenValuesLessOrEqualtoZero_ShouldBeNull()
         {
             ProjectRepository target = new ProjectRepository(); // TODO: Initialize to an appropriate value
             int ID = 0; // TODO: Initialize to an appropriate value
@@ -88,9 +86,17 @@ namespace MyDashboard.Model.Tests
             IProject actual;
             actual = target.GetProjectbyID(ID);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
         }
-
+        [TestMethod()]
+        public void GetProjectbyIDTest_WhenValuesGreaterThanZero_ShouldBeNotNull()
+        {
+            ProjectRepository target = new ProjectRepository(); // TODO: Initialize to an appropriate value
+            int ID = 1; // TODO: Initialize to an appropriate value
+            
+            IProject actual;
+            actual = target.GetProjectbyID(ID);
+            Assert.IsNotNull(actual);
+        }
         /// <summary>
         ///A test for GetProjectsbyAdministrator
         ///</summary>
@@ -102,7 +108,6 @@ namespace MyDashboard.Model.Tests
             IList<IProject> actual;
             actual = target.GetProjectsbyAdministrator();
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
         }
     }
 }

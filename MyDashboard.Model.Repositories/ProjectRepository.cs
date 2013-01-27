@@ -2,23 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using MyDashboard.Model.Interfaces.Entities;
 using MyDashboard.Model.Entities;
+using MyDashboard.Model.Interfaces.Entities;
+using MyDashboard.Model.Interfaces.Repositories;
 [assembly: CLSCompliant(true)]
 namespace MyDashboard.Model.Repositories
 {
-    public class ProjectRepository
+    public class ProjectRepository : IProjectRepository
     {
-        private ProjectRepository()
-        {
-
-        }
-        public static IProject GetProjectbyID(int ID)
+        public IProject GetProjectbyID(int ID)
         {
             Project project = new Project();
-            return project;
+            return (IProject)project;
         }
-        public static IList<IProject> GetProjectsbyAdministrator()
+        public IList<IProject> GetProjectsbyAdministrator()
         {
             var projects = new List<Project>();
             return (IList<IProject>)projects;

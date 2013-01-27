@@ -9,7 +9,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDashboard.Model.Repositor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDashboard.Model.Interfaces", "MyDashboard.Model.Interfaces\MyDashboard.Model.Interfaces.csproj", "{AAE77D3C-21EC-4204-9355-53650C014BDE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDashboard.Model.Tests", "MyDashboard.Model.Tests\MyDashboard.Model.Tests.csproj", "{36782630-E53D-40A4-A427-9E8308AF5860}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{510CC377-C168-44A0-BF62-4620DBB943E2}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		MyDashboard.vsmdi = MyDashboard.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = MyDashboard.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -27,6 +39,10 @@ Global
 		{AAE77D3C-21EC-4204-9355-53650C014BDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AAE77D3C-21EC-4204-9355-53650C014BDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AAE77D3C-21EC-4204-9355-53650C014BDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36782630-E53D-40A4-A427-9E8308AF5860}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36782630-E53D-40A4-A427-9E8308AF5860}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36782630-E53D-40A4-A427-9E8308AF5860}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36782630-E53D-40A4-A427-9E8308AF5860}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -35,5 +51,7 @@ Global
 		{481AAB57-7FBC-48B4-BB6A-734B3C54FF4A} = {2605C724-A9F5-4C02-82B0-67C546221B2E}
 		{5B8DC9FD-6CD1-49BF-B928-DE74040D4D37} = {2605C724-A9F5-4C02-82B0-67C546221B2E}
 		{AAE77D3C-21EC-4204-9355-53650C014BDE} = {2605C724-A9F5-4C02-82B0-67C546221B2E}
+		{36782630-E53D-40A4-A427-9E8308AF5860} = {2605C724-A9F5-4C02-82B0-67C546221B2E}
+		{510CC377-C168-44A0-BF62-4620DBB943E2} = {2605C724-A9F5-4C02-82B0-67C546221B2E}
 	EndGlobalSection
 EndGlobal

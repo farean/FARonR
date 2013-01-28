@@ -92,7 +92,8 @@ namespace MyDashboard.Model.Tests
             };
 
             Mock<IProjectRepository> projectrepository = new Moq.Mock<IProjectRepository>();
-            projectrepository.Setup(m => m.GetProjectsbyAdministrator(It.IsAny<IOwner>())).Returns((IOwner owner) =>projectlist.Where(m => m.Owners.Where(o => o.ID == owner.ID)).ToList());
+            projectrepository.Setup(m => m.GetProjectsbyAdministrator(It.IsAny<IOwner>())).Returns((IOwner owner) => projectlist.Where(m => m.Owners.Any(o => o.ID == owner.ID)).ToList());
+
             projectrepository.Setup(m => m.GetProjectbyID(It.IsAny<int>())).Returns((int i) => projectlist.Where(m => m.ID == i).Single());
             _projectsrepository = projectrepository.Object;
         }
@@ -147,12 +148,12 @@ namespace MyDashboard.Model.Tests
         {
             Owner owner = new Owner
             {
-                ID = 6,
+                ID = 3,
                 Name = "Fernando Arean"
             };
             IList<IProject> projectlist = _projectsrepository.GetProjectsbyAdministrator(owner);
 
-            Assert.IsNotNull(projectlist);
+            Assert.AreEqual(2,projectlist.Count);
         }
     }
 }

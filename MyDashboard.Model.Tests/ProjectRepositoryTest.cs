@@ -92,7 +92,7 @@ namespace MyDashboard.Model.Tests
             };
 
             Mock<IProjectRepository> projectrepository = new Moq.Mock<IProjectRepository>();
-            projectrepository.Setup(m => m.GetProjectsbyAdministrator()).Returns(projectlist);
+            projectrepository.Setup(m => m.GetProjectsbyAdministrator(It.IsAny<IOwner>())).Returns((IOwner owner) =>projectlist.Where(m => m.Owners.Where(o => o.ID == owner.ID)).ToList());
             projectrepository.Setup(m => m.GetProjectbyID(It.IsAny<int>())).Returns((int i) => projectlist.Where(m => m.ID == i).Single());
             _projectsrepository = projectrepository.Object;
         }
@@ -130,23 +130,13 @@ namespace MyDashboard.Model.Tests
             Assert.AreEqual(expected, actual);
         }
         [TestMethod()]
-        public void GetProjectbyIDTest_WhenValuesGreaterThanZero_ShouldBeNotNull()
-        {
-            ProjectRepository target = new ProjectRepository(); // TODO: Initialize to an appropriate value
-            int ID = 1; // TODO: Initialize to an appropriate value
-
-            IProject actual;
-            actual = target.GetProjectbyID(ID);
-            Assert.IsNotNull(actual);
-        }
-        [TestMethod()]
         public void GetProjectbyIDTest_WhenValuesGreaterThanZero_ShouldBeNotNullandFindit()
         {
             
             int ID = 2; // TODO: Initialize to an appropriate value
 
             IProject actual= _projectsrepository.GetProjectbyID(ID);
-
+            Assert.IsNotNull(actual);
             Assert.AreEqual(ID,actual.ID);
         }
         /// <summary>
@@ -155,7 +145,12 @@ namespace MyDashboard.Model.Tests
         [TestMethod()]
         public void GetProjectsbyAdministratorTest()
         {
-            IList<IProject> projectlist = _projectsrepository.GetProjectsbyAdministrator();
+            Owner owner = new Owner
+            {
+                ID = 6,
+                Name = "Fernando Arean"
+            };
+            IList<IProject> projectlist = _projectsrepository.GetProjectsbyAdministrator(owner);
 
             Assert.IsNotNull(projectlist);
         }

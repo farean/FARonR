@@ -7,6 +7,6 @@ namespace MyDashboard.Model.Interfaces.Repositories
     public interface IProjectRepository
     {
         IProject GetProjectbyID(int ID);
-        IList<IProject> GetProjectsbyAdministrator();
+        IList<IProject> GetProjectsbyAdministrator(IOwner owner);
     }
 }

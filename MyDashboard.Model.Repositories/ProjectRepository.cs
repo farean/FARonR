@@ -18,9 +18,13 @@ namespace MyDashboard.Model.Repositories
             Project project = new Project();
             return (IProject)project;
         }
-        public IList<IProject> GetProjectsbyAdministrator()
+        public IList<IProject> GetProjectsbyAdministrator(IOwner owner)
         {
+            if (owner == null)
+                return null;
+
             var projects = new List<Project>();
+            
             return (IList<IProject>)projects;
         }
     }

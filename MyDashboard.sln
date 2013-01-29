@@ -18,6 +18,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MyDashboard.Data", "MyDashboard.Data", "{FDBF585C-5994-4F4D-ACEC-8C8835A1D265}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDashboard.Data", "MyDashboard.Data\MyDashboard.Data.csproj", "{3FD582CF-F876-4541-8FD5-75A46F283DC0}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = MyDashboard.vsmdi
@@ -43,6 +47,10 @@ Global
 		{36782630-E53D-40A4-A427-9E8308AF5860}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36782630-E53D-40A4-A427-9E8308AF5860}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36782630-E53D-40A4-A427-9E8308AF5860}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FD582CF-F876-4541-8FD5-75A46F283DC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FD582CF-F876-4541-8FD5-75A46F283DC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FD582CF-F876-4541-8FD5-75A46F283DC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FD582CF-F876-4541-8FD5-75A46F283DC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,5 +61,6 @@ Global
 		{AAE77D3C-21EC-4204-9355-53650C014BDE} = {2605C724-A9F5-4C02-82B0-67C546221B2E}
 		{36782630-E53D-40A4-A427-9E8308AF5860} = {2605C724-A9F5-4C02-82B0-67C546221B2E}
 		{510CC377-C168-44A0-BF62-4620DBB943E2} = {2605C724-A9F5-4C02-82B0-67C546221B2E}
+		{3FD582CF-F876-4541-8FD5-75A46F283DC0} = {FDBF585C-5994-4F4D-ACEC-8C8835A1D265}
 	EndGlobalSection
 EndGlobal

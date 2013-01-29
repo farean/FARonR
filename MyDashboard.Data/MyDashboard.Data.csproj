@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{5B8DC9FD-6CD1-49BF-B928-DE74040D4D37}</ProjectGuid>
+    <ProjectGuid>{3FD582CF-F876-4541-8FD5-75A46F283DC0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MyDashboard.Model.Repositories</RootNamespace>
-    <AssemblyName>MyDashboard.Model.Repositories</AssemblyName>
+    <RootNamespace>MyDashboard.Data</RootNamespace>
+    <AssemblyName>MyDashboard.Data</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,30 +32,26 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProjectRepository.cs" />
+    <Compile Include="Contexts\MyDashboardContext.cs" />
+    <Compile Include="Entities\Project.cs" />
+    <Compile Include="Entities\StatusProject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MyDashboard.Data\MyDashboard.Data.csproj">
-      <Project>{3FD582CF-F876-4541-8FD5-75A46F283DC0}</Project>
-      <Name>MyDashboard.Data %28MyDashboard.Data\MyDashboard.Data%29</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MyDashboard.Model.Entities\MyDashboard.Model.Entities.csproj">
-      <Project>{481AAB57-7FBC-48B4-BB6A-734B3C54FF4A}</Project>
-      <Name>MyDashboard.Model.Entities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MyDashboard.Model.Interfaces\MyDashboard.Model.Interfaces.csproj">
-      <Project>{AAE77D3C-21EC-4204-9355-53650C014BDE}</Project>
-      <Name>MyDashboard.Model.Interfaces</Name>
-    </ProjectReference>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
